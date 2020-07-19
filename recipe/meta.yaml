@@ -1,18 +1,18 @@
 {% set name = "pytest-freezegun" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip"
-  sha256: 060cdf192848e50a4a681a5e73f8b544c4ee5ebc1fab3cb7223a0097bac2f83f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  sha256: 19c82d5633751bf3ec92caa481fb5cffaac1787bd485f0df6436fd6242176949
 
 build:
-  noarch: "python"
+  noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -29,13 +29,13 @@ test:
     - pytest_freezegun
 
 about:
-  home: "https://github.com/ktosiek/pytest-freezegun"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE"
-  summary: "Wrap tests with fixtures in freeze_time"
-  dev_url: "https://github.com/ktosiek/pytest-freezegun"
-  description: "Wrap tests with fixtures in freeze_time"
+  home: https://github.com/ktosiek/pytest-freezegun
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Wrap tests with fixtures in freeze_time
+  dev_url: https://github.com/ktosiek/pytest-freezegun
+  description: Wrap tests with fixtures in freeze_time
 
 extra:
   recipe-maintainers:
