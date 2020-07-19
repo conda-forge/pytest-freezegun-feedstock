@@ -5,7 +5,7 @@ Home: https://github.com/ktosiek/pytest-freezegun
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Wrap tests with fixtures in freeze_time
 
