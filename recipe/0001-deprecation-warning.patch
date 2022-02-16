@@ -1,0 +1,20 @@
+--- pytest_freegun.py	2022-02-16 18:57:46.000000000 +0100
++++ pytest_freezegun.py	2022-02-16 18:58:29.000000000 +0100
+@@ -2,7 +2,7 @@
+
+ import pytest
+
+-from distutils.version import LooseVersion
++from packaging.version import parse as parse_version
+ from freezegun import freeze_time
+
+
+@@ -14,7 +14,7 @@
+     """
+     Get our marker, regardless of pytest version
+     """
+-    if LooseVersion(pytest.__version__) < LooseVersion('3.6.0'):
++    if parse_version(pytest.__version__) < parse_version('3.6.0'):
+         return node.get_marker('freeze_time')
+     else:
+         return node.get_closest_marker('freeze_time')
