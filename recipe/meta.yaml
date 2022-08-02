@@ -23,6 +23,7 @@ requirements:
     - setuptools
   run:
     - freezegun >0.3
+    - packaging >=14.1
     - pytest >=3.0.0
     - python >=3.6
 
