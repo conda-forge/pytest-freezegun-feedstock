@@ -24,7 +24,7 @@ requirements:
   run:
     - freezegun >0.3
     - pytest >=3.0.0
-    - python =>3.6
+    - python >=3.6
 
 test:
   imports:
